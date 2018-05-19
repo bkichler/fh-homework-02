@@ -2,7 +2,7 @@
 
 ## Due Date
 
-TBD
+Thursday, May 31, 2018 @ 1:00 PM
 
 ## Goals
 
@@ -21,7 +21,9 @@ TBD
 
   - search for book by [title, author, classification, genre, type]
 
-## Readings and Resources
+## Required Readings and Resources
+
+The Rails Command Line - http://guides.rubyonrails.org/command_line.html
 
 Active Record Query Interface - http://guides.rubyonrails.org/active_record_querying.html
 
@@ -79,8 +81,8 @@ Seed File - http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html
 
 ## Creating Rails API application
 
-  $ rails new homework_02 -T -d postgresql
-  $ cd homework_02
+  $ rails new fh-homework-02 -T -d postgresql
+  $ cd fh-homework-02
   $ git init
   $ git add .
   $ git commit -am 'Initial commit'
@@ -94,7 +96,7 @@ Seed File - http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html
 
 ## Deliverables
 
-  - create a repo called `homework-02` on Github.com
+  - create a repo called `fh-homework-02` on Github.com
 
   - push changes to Github to the branch, `part-01-initial-app`
 
