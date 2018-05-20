@@ -1,1 +1,9 @@
 <h1>Books are cool</h1>
+<div class="books">
+  <% @books.each do |book| %>
+  <ul>
+    <li><b>Title: </b><i><%= link_to book.title, book_path(book) %></i></li>
+    <li><b>Author: </b><%= book.author %></li>
+  </ul>
+  <% end %>
+</div>
