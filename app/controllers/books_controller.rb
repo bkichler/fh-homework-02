@@ -1,14 +1,10 @@
 class BooksController < ApplicationController
 
   def index
-    @books = if params[:search_term]
-        if Book.where('title LIKE ?', "%#{params[:search_term]}%").empty?  
-          Book.where('author LIKE ?', "%#{params[:search_term]}%").page params[:page]
-        else 
-          Book.where('title LIKE ?', "%#{params[:search_term]}%").page params[:page]
-        end
-      else
-        Book.order(:author).page params[:page]
+    if params[:search_term]
+      @books = Book.search(params[:search_term])
+    else
+      @books = Book.order(:author).page params[:page]
     end
   end
 

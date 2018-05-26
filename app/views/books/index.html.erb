@@ -14,9 +14,13 @@
     <li><b>Author: </b><%= book.author %></li>
   </ul>
   <% end %>
-  <%= paginate @books %>
+  <% if params[:search_term] %>
+    <br /><br />
+  <% else %>
+    <%= paginate @books %>
   <br />
   <%= page_entries_info @books, entry_name: 'book' %>
+  <% end %>
   <br /><br />
   <%= link_to 'Books Home', books_path %>
 </div>
