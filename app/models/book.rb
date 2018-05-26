@@ -10,4 +10,12 @@ class Book < ApplicationRecord
       order(:author)
     end
   end
+
+  validates_presence_of :title
+  validates_presence_of :author
+  validates_presence_of :genre
+  validates_presence_of :classification
+  validates_presence_of :booktype
+  validates_presence_of :year
+  
 end

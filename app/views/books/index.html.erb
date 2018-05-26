@@ -1,8 +1,8 @@
 <h1>Books are cool</h1>
 <div class="search">
-  <h3>Find a book in the database</h3>
+  <h3>Find a book in the database or <%= link_to 'add a book', new_book_path %></h3>
     <%= form_tag(books_path, method: :get) do %>
-      <%= label_tag(:search_term, "Search by Title:") %>
+      <%= label_tag(:search_term, "Search by title, author, classification, genre, or type:") %>
       <%= text_field_tag(:search_term) %>
       <%= submit_tag("Search") %>
     <% end %>
@@ -12,6 +12,8 @@
   <ul>
     <li><b>Title: </b><i><%= link_to book.title, book_path(book) %></i></li>
     <li><b>Author: </b><%= book.author %></li>
+    <li><b>Classification: </b><%= book.classification %></li>
+    <li><%= link_to 'Something off? Edit this book', edit_book_path(book) %></li>
   </ul>
   <% end %>
   <% if params[:search_term] %>

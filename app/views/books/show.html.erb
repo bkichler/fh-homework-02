@@ -43,3 +43,7 @@
     </tr>
   </table>
 </div>
+<div id="links">
+  <%= link_to 'Delete this book', @book, method: :delete, data: {confirm: 'Are you sure?'} %><br />
+  <%= link_to 'Books Home', root_path %>
+</div>

@@ -91,3 +91,11 @@ ul {
 label {
   display: block;
 }
+
+li > a {
+  font-size: 0.8em;
+}
+
+#search_term {
+    width: 400px;
+}
