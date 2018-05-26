@@ -1,4 +1,12 @@
 <h1>Books are cool</h1>
+<div class="search">
+  <h3>Find a book in the database</h3>
+    <%= form_tag(books_path, method: :get) do %>
+      <%= label_tag(:search_term, "Search by Title:") %>
+      <%= text_field_tag(:search_term) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+</div>
 <div class="books">
   <% @books.each do |book| %>
   <ul>
@@ -6,4 +14,9 @@
     <li><b>Author: </b><%= book.author %></li>
   </ul>
   <% end %>
+  <%= paginate @books %>
+  <br />
+  <%= page_entries_info @books, entry_name: 'book' %>
+  <br /><br />
+  <%= link_to 'Books Home', books_path %>
 </div>

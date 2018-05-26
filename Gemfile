@@ -54,3 +54,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # faker gem for test data 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+# Add pagination
+gem 'kaminari'
+
+# Add simple form for forms 
+gem 'simple_form'

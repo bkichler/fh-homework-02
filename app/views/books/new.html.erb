@@ -1,0 +1,11 @@
+<h1>Enter a New Book</h1>
+<br />
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.input :genre %>
+  <%= f.input :classification %>
+  <%= f.input :booktype, label: 'Type of Book' %>
+  <%= f.input :year, label: 'Year Published' %>
+  <%= f.button :submit %>
+<% end %>
