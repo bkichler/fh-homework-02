@@ -11,6 +11,7 @@
   <% @books.each do |book| %>
   <ul>
     <li><b>Title: </b><i><%= link_to book.title, book_path(book) %></i></li>
+    <li class="small"><b>Subtitle: </b><%= book.sub_title %></li>
     <li><b>Author: </b><%= book.author %></li>
     <li><b>Classification: </b><%= book.classification %></li>
     <li><b>Genre: </b><%= book.genre %></li>
