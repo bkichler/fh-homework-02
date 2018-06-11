@@ -13,7 +13,7 @@
     <li><b>Title: </b><i><%= link_to book.title, book_path(book) %></i></li>
     <li><b>Author: </b><%= book.author %></li>
     <li><b>Classification: </b><%= book.classification %></li>
-    <li><%= link_to 'Something off? Edit this book', edit_book_path(book) %></li>
+    <li class="small"><%= link_to 'Something off? Edit this book', edit_book_path(book) %></li>
   </ul>
   <% end %>
   <% if params[:search_term] %>

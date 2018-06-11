@@ -1,11 +1,11 @@
 class BooksController < ApplicationController
 
   def index
-    if params[:search_term]
-      @books = Book.search(params[:search_term])
-    else
-      @books = Book.order(:author).page params[:page]
-    end
+    # if params[:search_term]
+      @books = Book.search(params[:search_term]).page(params[:page])
+    # else
+    #   @books = Book.order(:author).page params[:page]
+    # end
   end
 
   def show
