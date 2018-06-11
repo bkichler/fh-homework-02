@@ -1,11 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    # if params[:search_term]
-      @books = Book.search(params[:search_term]).page(params[:page])
-    # else
-    #   @books = Book.order(:author).page params[:page]
-    # end
+    @books = Book.search(params[:search_term]).page(params[:page])
   end
 
   def show
@@ -49,6 +45,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :genre, :classification, :booktype, :year, :search_term)
+    params.require(:book).permit(:title, :genre, :classification, :booktype, :year, :sub_title, :search_term)
   end
 end

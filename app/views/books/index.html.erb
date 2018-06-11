@@ -13,6 +13,9 @@
     <li><b>Title: </b><i><%= link_to book.title, book_path(book) %></i></li>
     <li><b>Author: </b><%= book.author %></li>
     <li><b>Classification: </b><%= book.classification %></li>
+    <li><b>Genre: </b><%= book.genre %></li>
+    <li><b>Book Type: </b><%= book.booktype %></li>
+    <li><b>Year: </b><%= book.year %></li>
     <li class="small"><%= link_to 'Something off? Edit this book', edit_book_path(book) %></li>
   </ul>
   <% end %>

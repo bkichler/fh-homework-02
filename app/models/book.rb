@@ -1,12 +1,11 @@
 class Book < ApplicationRecord
   validates_presence_of :title
-  validates_presence_of :author
   validates_presence_of :genre
   validates_presence_of :classification
   validates_presence_of :booktype
   validates_presence_of :year
 
-  belongs_to :author
+  has_many :authors, :through => :authorships
 
   paginates_per 10
 
